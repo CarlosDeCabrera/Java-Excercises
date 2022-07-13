@@ -1,6 +1,4 @@
-package com.company;
-
-import java.util.Locale;
+package com.company.Classes_and_OOB;
 
 public class Car {
 
@@ -23,5 +21,8 @@ public class Car {
 
     public String getModel(){
         return this.model;
+    }
+
+    public static class SumCalculator {
     }
 }
