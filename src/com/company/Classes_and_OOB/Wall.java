@@ -4,47 +4,59 @@ public class Wall {
 
     private double height;
     private double width;
-    private double area;
+
+
     public Wall(){
-        this(1.0, 1.0);
+
+        this(0.0, 0.0);
+
     }
 
-    public Wall(double height, double width) {
+    public Wall(double width, double height) {
         if (height < 0){
             this.height = 0;
+        }else{
+            this.height = height;
         }
-        this.height = height;
+
 
         if (width < 0){
-            this.height = 0;
-        }
-        this.width = width;
+            this.width = 0;
+        }else{
+            this.width = width;
+    }
     }
 
     public double getHeight() {
-        return height;
+
+        return this.height;
     }
 
     public void setHeight(double height) {
         if (height < 0){
             height = 0;
-        }
+        }else {
         this.height = height;
+        }
     }
 
     public double getWidth() {
-        return width;
+        return this.width;
     }
 
     public void setWidth(double width) {
        if (width < 0){
            width = 0;
-       }
+       }else {
         this.width = width;
+        }
     }
 
     public double getArea(){
-        return this.area = this.height * this.width;
+        if (this.height < 0 || this.width < 0){
+            return 0;
+        }
+        return this.height * this.width;
 
     }
 
