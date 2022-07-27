@@ -1,23 +1,18 @@
 package com.company;
+import com.company.Classes_and_OOB.Animal;
 import com.company.Classes_and_OOB.ComplexNumber;
+import com.company.Classes_and_OOB.Dog;
 
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ComplexNumber one = new ComplexNumber(1.0,1.0);
-        ComplexNumber number = new ComplexNumber(2.5,-1.5);
-        one.add (1.0,1.0);
-        System.out.println("one.real = " + one.getReal());
-        System.out.println("one.imaginary = " + one.getImaginary());
-        one.subtract(number);
-        System.out.println("one.sub one.real = " + one.getReal());
-        System.out.println("one.imaginary =" + one.getImaginary());
-        number.subtract(one);
-        System.out.println("number.real = " + number.getReal());
-        System.out.println("number.imaginary =" + number.getImaginary());
-
+        Animal animal = new Animal("animal", 1, 1,5,5);
+        Dog dog = new Dog("Yorkie", 8,20,2,4,1,20,"Long silky");
+        dog.eat();
+        dog.walk();
+        dog.run();
 
     }
 }
